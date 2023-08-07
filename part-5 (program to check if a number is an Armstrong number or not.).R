@@ -6,12 +6,22 @@
 num = as.integer(readline(prompt="enter a number: "))
 
 sum <- 0
-temp = num
+temp <- num
+length <- 0                               # assigning a variable length with value 0
+
+# to find the length of the the input digits
+while (temp > 0){
+  temp <- floor(temp /10)
+  length = length + 1
+  
+}
+
+temp <- num                               # reassigning the value of num to temp
 
 # finding the sum of cube of each digit
 while (temp > 0){
   digit = temp %% 10
-  sum = sum + (digit ^ 3)
+  sum = sum + (digit ^ length)
   temp = floor(temp / 10)   #floor is used to round down a number
 }
 
